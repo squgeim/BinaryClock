@@ -24,8 +24,8 @@ struct Provider: IntentTimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+        for secondOffset in 0 ..< 360 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
         }
@@ -40,11 +40,18 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
+func getTimeStr(date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "hh:mm:ss"
+    let dateStr = formatter.string(from: date)
+
+    return dateStr
+}
+
 struct BinaryClockWidgetEntryView : View {
     var entry: Provider.Entry
-
     var body: some View {
-        Text(entry.date, style: .time)
+        Text(getTimeStr(date: entry.date))
     }
 }
 
