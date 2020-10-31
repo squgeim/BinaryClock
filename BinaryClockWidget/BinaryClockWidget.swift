@@ -9,10 +9,6 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-func roundOffTimestamp(_ timeIntervalSince1970: TimeInterval) -> TimeInterval {
-    return timeIntervalSince1970
-}
-
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationIntent())
@@ -26,10 +22,13 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDateTimestamp = Date().timeIntervalSince1970
-        let currentDate = Date(timeIntervalSince1970: roundOffTimestamp(currentDateTimestamp))
+        // Using timeIntervalSince to create a new date because the TimeInterval
+        // value in timeIntervalSince is always aligned to seconds -- we are
+        // basically rounding-off any milli/microseconds so that the timeline
+        // is precisely laid out.
+        let currentDate = Date(timeIntervalSince1970: Date().timeIntervalSince1970)
 
+        // Creating a timeline for the next 5 minutes.
         for secondOffset in 0 ..< 360 {
             let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
