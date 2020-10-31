@@ -58,6 +58,7 @@
 		10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BinaryClockWidget.intentdefinition; sourceTree = "<group>"; };
 		10B10BD9254DDD3900021530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B10BDB254DDD3900021530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B10BE7254DF69900021530 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		10B10BAF254DDCFF00021530 = {
 			isa = PBXGroup;
 			children = (
+				10B10BE7254DF69900021530 /* README.md */,
 				10B10BBA254DDCFF00021530 /* BinaryClock */,
 				10B10BD5254DDD3700021530 /* BinaryClockWidget */,
 				10B10BD0254DDD3700021530 /* Frameworks */,
