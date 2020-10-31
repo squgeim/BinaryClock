@@ -6,4 +6,4 @@ a binary clock on Gnome 2 toolbar -- those were happier days.
 
 Light Mode | Dark Mode
 :-----:|:------:
-![](./light-preview.png) | ![](./dark-preview.png)
+![](light-preview.png) | ![](dark-preview.png)
