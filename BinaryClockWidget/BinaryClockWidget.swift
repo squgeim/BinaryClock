@@ -9,6 +9,10 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+func roundOffTimestamp(_ timeIntervalSince1970: TimeInterval) -> TimeInterval {
+    return timeIntervalSince1970
+}
+
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationIntent())
@@ -23,7 +27,9 @@ struct Provider: IntentTimelineProvider {
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
+        let currentDateTimestamp = Date().timeIntervalSince1970
+        let currentDate = Date(timeIntervalSince1970: roundOffTimestamp(currentDateTimestamp))
+
         for secondOffset in 0 ..< 360 {
             let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
@@ -96,7 +102,7 @@ struct BinaryClockWidgetEntryView : View {
             ForEach(getTimeBitList(date: entry.date), id: \.self) { bitList in
                 VStack {
                     ForEach(bitList, id: \.self) { bit in
-                        bit ? Text("1") : Text("0")
+                        bit ? Text("◼︎") : Text("☐")
                     }
                 }
             }
