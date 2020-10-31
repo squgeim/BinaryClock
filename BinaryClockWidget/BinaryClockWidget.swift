@@ -28,8 +28,9 @@ struct Provider: IntentTimelineProvider {
         // is precisely laid out.
         let currentDate = Date(timeIntervalSince1970: Date().timeIntervalSince1970)
 
-        // Creating a timeline for the next 5 minutes.
-        for secondOffset in 0 ..< 360 {
+        // Creating a timeline for the next 1 hour. Widget is only refresh a limited
+        // number of times, so it is best to have timeline ready for a long time.
+        for secondOffset in 0 ..< 3600 {
             let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
