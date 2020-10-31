@@ -102,7 +102,7 @@ struct BinaryClockWidgetEntryView : View {
             ForEach(getTimeBitList(date: entry.date), id: \.self) { bitList in
                 VStack {
                     ForEach(bitList, id: \.self) { bit in
-                        bit ? Text("1") : Text("0")
+                        bit ? Text("◼︎") : Text("☐")
                     }
                 }
             }
