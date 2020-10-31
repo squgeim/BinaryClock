@@ -18,6 +18,7 @@
 		10B10BDC254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */; };
 		10B10BDD254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */; };
 		10B10BE0254DDD3900021530 /* BinaryClockWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 10B10BCF254DDD3700021530 /* BinaryClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		10B10BF2254DFD3400021530 /* DateTimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BEC254DFAFE00021530 /* DateTimeUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		10B10BD9254DDD3900021530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B10BDB254DDD3900021530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B10BE7254DF69900021530 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		10B10BEC254DFAFE00021530 /* DateTimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				10B10BD6254DDD3700021530 /* BinaryClockWidget.swift */,
+				10B10BEC254DFAFE00021530 /* DateTimeUtils.swift */,
 				10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */,
 				10B10BD9254DDD3900021530 /* Assets.xcassets */,
 				10B10BDB254DDD3900021530 /* Info.plist */,
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B10BF2254DFD3400021530 /* DateTimeUtils.swift in Sources */,
 				10B10BDC254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */,
 				10B10BD7254DDD3700021530 /* BinaryClockWidget.swift in Sources */,
 			);
