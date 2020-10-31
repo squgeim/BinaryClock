@@ -24,8 +24,8 @@ struct Provider: IntentTimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+        for secondOffset in 0 ..< 360 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
         }
@@ -40,11 +40,67 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
+func getTimeStr(date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HHmmss"
+    let dateStr = formatter.string(from: date)
+
+    return dateStr
+}
+
+func getBitsForChar(digit: Int) -> [Bool] {
+    switch digit {
+    case 0:
+        return [false,false,false,false]
+    case 1:
+        return [false,false,false,true]
+    case 2:
+        return [false,false,true,false]
+    case 3:
+        return [false,false,true,true]
+    case 4:
+        return [false,true,false,false]
+    case 5:
+        return [false,true,false,true]
+    case 6:
+        return [false,true,true,false]
+    case 7:
+        return [false,true,true,true]
+    case 8:
+        return [true,false,false,false]
+    case 9:
+        return [true,false,false,true]
+    default:
+        return [false,false,false,false]
+    }
+}
+
+func getTimeBitList(date: Date) -> [[Bool]] {
+    var bitList: [[Bool]] = []
+
+    let time = getTimeStr(date: date)
+
+    for char in time {
+        let bits = getBitsForChar(digit: Int(String(char)) ?? 0)
+        bitList.append(bits);
+    }
+
+    return bitList
+}
+
 struct BinaryClockWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        HStack {
+            ForEach(getTimeBitList(date: entry.date), id: \.self) { bitList in
+                VStack {
+                    ForEach(bitList, id: \.self) { bit in
+                        bit ? Text("1") : Text("0")
+                    }
+                }
+            }
+        }
     }
 }
 
