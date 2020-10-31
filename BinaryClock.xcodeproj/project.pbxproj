@@ -11,7 +11,38 @@
 		10B10BBE254DDCFF00021530 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BBD254DDCFF00021530 /* ContentView.swift */; };
 		10B10BC0254DDD0200021530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B10BBF254DDD0200021530 /* Assets.xcassets */; };
 		10B10BC3254DDD0200021530 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B10BC2254DDD0200021530 /* Preview Assets.xcassets */; };
+		10B10BD2254DDD3700021530 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B10BD1254DDD3700021530 /* WidgetKit.framework */; };
+		10B10BD4254DDD3700021530 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B10BD3254DDD3700021530 /* SwiftUI.framework */; };
+		10B10BD7254DDD3700021530 /* BinaryClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BD6254DDD3700021530 /* BinaryClockWidget.swift */; };
+		10B10BDA254DDD3900021530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B10BD9254DDD3900021530 /* Assets.xcassets */; };
+		10B10BDC254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */; };
+		10B10BDD254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */; };
+		10B10BE0254DDD3900021530 /* BinaryClockWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 10B10BCF254DDD3700021530 /* BinaryClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10B10BDE254DDD3900021530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10B10BB0254DDCFF00021530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10B10BCE254DDD3700021530;
+			remoteInfo = BinaryClockWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10B10BE4254DDD3900021530 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				10B10BE0254DDD3900021530 /* BinaryClockWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		10B10BB8254DDCFF00021530 /* BinaryClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinaryClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +51,13 @@
 		10B10BBF254DDD0200021530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B10BC2254DDD0200021530 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10B10BC4254DDD0200021530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B10BCF254DDD3700021530 /* BinaryClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BinaryClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B10BD1254DDD3700021530 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		10B10BD3254DDD3700021530 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		10B10BD6254DDD3700021530 /* BinaryClockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryClockWidget.swift; sourceTree = "<group>"; };
+		10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BinaryClockWidget.intentdefinition; sourceTree = "<group>"; };
+		10B10BD9254DDD3900021530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10B10BDB254DDD3900021530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +68,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10B10BCC254DDD3700021530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B10BD4254DDD3700021530 /* SwiftUI.framework in Frameworks */,
+				10B10BD2254DDD3700021530 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				10B10BBA254DDCFF00021530 /* BinaryClock */,
+				10B10BD5254DDD3700021530 /* BinaryClockWidget */,
+				10B10BD0254DDD3700021530 /* Frameworks */,
 				10B10BB9254DDCFF00021530 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				10B10BB8254DDCFF00021530 /* BinaryClock.app */,
+				10B10BCF254DDD3700021530 /* BinaryClockWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +119,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		10B10BD0254DDD3700021530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10B10BD1254DDD3700021530 /* WidgetKit.framework */,
+				10B10BD3254DDD3700021530 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10B10BD5254DDD3700021530 /* BinaryClockWidget */ = {
+			isa = PBXGroup;
+			children = (
+				10B10BD6254DDD3700021530 /* BinaryClockWidget.swift */,
+				10B10BD8254DDD3700021530 /* BinaryClockWidget.intentdefinition */,
+				10B10BD9254DDD3900021530 /* Assets.xcassets */,
+				10B10BDB254DDD3900021530 /* Info.plist */,
+			);
+			path = BinaryClockWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +149,34 @@
 				10B10BB4254DDCFF00021530 /* Sources */,
 				10B10BB5254DDCFF00021530 /* Frameworks */,
 				10B10BB6254DDCFF00021530 /* Resources */,
+				10B10BE4254DDD3900021530 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				10B10BDF254DDD3900021530 /* PBXTargetDependency */,
 			);
 			name = BinaryClock;
 			productName = BinaryClock;
 			productReference = 10B10BB8254DDCFF00021530 /* BinaryClock.app */;
 			productType = "com.apple.product-type.application";
+		};
+		10B10BCE254DDD3700021530 /* BinaryClockWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B10BE1254DDD3900021530 /* Build configuration list for PBXNativeTarget "BinaryClockWidgetExtension" */;
+			buildPhases = (
+				10B10BCB254DDD3700021530 /* Sources */,
+				10B10BCC254DDD3700021530 /* Frameworks */,
+				10B10BCD254DDD3700021530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryClockWidgetExtension;
+			productName = BinaryClockWidgetExtension;
+			productReference = 10B10BCF254DDD3700021530 /* BinaryClockWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +188,9 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					10B10BB7254DDCFF00021530 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					10B10BCE254DDD3700021530 = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
@@ -117,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				10B10BB7254DDCFF00021530 /* BinaryClock */,
+				10B10BCE254DDD3700021530 /* BinaryClockWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +224,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10B10BCD254DDD3700021530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B10BDA254DDD3900021530 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,10 +241,28 @@
 			files = (
 				10B10BBE254DDCFF00021530 /* ContentView.swift in Sources */,
 				10B10BBC254DDCFF00021530 /* BinaryClockApp.swift in Sources */,
+				10B10BDD254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B10BCB254DDD3700021530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B10BDC254DDD3900021530 /* BinaryClockWidget.intentdefinition in Sources */,
+				10B10BD7254DDD3700021530 /* BinaryClockWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10B10BDF254DDD3900021530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10B10BCE254DDD3700021530 /* BinaryClockWidgetExtension */;
+			targetProxy = 10B10BDE254DDD3900021530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		10B10BC5254DDD0200021530 /* Debug */ = {
@@ -265,6 +384,7 @@
 		10B10BC8254DDD0200021530 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +407,7 @@
 		10B10BC9254DDD0200021530 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +422,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shreyadahal.BinaryClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10B10BE2254DDD3900021530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9X7PWFW8P;
+				INFOPLIST_FILE = BinaryClockWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shreyadahal.BinaryClock.BinaryClockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10B10BE3254DDD3900021530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9X7PWFW8P;
+				INFOPLIST_FILE = BinaryClockWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shreyadahal.BinaryClock.BinaryClockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +486,15 @@
 			buildConfigurations = (
 				10B10BC8254DDD0200021530 /* Debug */,
 				10B10BC9254DDD0200021530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B10BE1254DDD3900021530 /* Build configuration list for PBXNativeTarget "BinaryClockWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B10BE2254DDD3900021530 /* Debug */,
+				10B10BE3254DDD3900021530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
