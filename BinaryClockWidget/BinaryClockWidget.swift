@@ -69,8 +69,8 @@ struct BinaryClockWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             BinaryClockWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("BinaryClock")
+        .description("Display current time in binary!")
     }
 }
 
